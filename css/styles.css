@@ -158,9 +158,11 @@ nav li a {
    position: relative;
    transition: .3s color;
    font-size: 0.937rem;
+   outline: transparent;
 }
 
-nav li a:hover {
+nav li a:hover,
+nav li a:focus {
    /* color: var(--Bright-Blue); */
    color: var(--Desaturated-Blue);
 }
@@ -175,11 +177,13 @@ nav li a::after {
    background-color: var(--Very-Dark-Blue);
    transform: scaleX(0);
    transform-origin: left;
-   transition: .3s transform,
-               .3s background-color;
+   transition: .5s transform,
+               .5s background-color;
+   outline: transparent;
 }
 
-nav li a:hover::after {
+nav li a:hover::after, 
+nav li a:focus::after {
    transform: scaleX(1);
    background-color: var(--Desaturated-Blue);
 }
@@ -266,6 +270,7 @@ section.productive a {
    font-size: 0.878rem;
    color: var(--Moderate-Cyan);
    position: relative;
+   outline: transparent;
 }
 
 section.productive a::before {
@@ -276,11 +281,12 @@ section.productive a::before {
    width: 100%;
    height: 1px;
    background-color: var(--Moderate-Cyan);
-   transition: .5s transform;
+   transition: 1s transform;
    transform-origin: left;
 }
 
-section.productive a:hover::before {
+section.productive a:hover::before, 
+section.productive a:focus::before {
    transform: scaleX(0);
 }
 
@@ -389,12 +395,18 @@ footer ul {
 
 /* ftr-company-logo --*/
 
+.ftr-company-logo a:focus {
+   outline: transparent;
+}
+
 .ftr-company-logo img {
    width: 180px;
    filter: contrast(0) brightness(100);
+   outline: transparent;
 }
 
-.ftr-company-logo img:hover {
+.ftr-company-logo img:hover,
+.ftr-company-logo a:focus img{
    filter: brightness(1) contrast(1) hue-rotate(0deg) saturate(50);
 }
 
@@ -442,8 +454,10 @@ footer ul {
    position: relative;
 }
 
-.company-info li a:hover {
+.company-info li a:hover, 
+.company-info li a:focus {
    color: var(--Bright-Blue);
+   outline: transparent;
 }
 
 .company-info li a::after {
@@ -460,7 +474,8 @@ footer ul {
                .3s background-color;
 }
 
-.company-info li a:hover::after {
+.company-info li a:hover::after, 
+.company-info li a:focus::after {
    transform: scaleX(1);
    background-color: var(--Bright-Blue);
 }
@@ -497,6 +512,7 @@ footer ul {
    width: 35px;
    height: 35px;
    transition: .3s all;
+   outline: transparent;
 }
 
 .social-icons a > i {
@@ -508,15 +524,18 @@ footer ul {
    font-size: 1.138rem;
    line-height: 33px;
 }
-.social-icons li.facebook:hover > a {
+.social-icons li.facebook:hover > a,
+.social-icons li.facebook > a:focus {
    background-color: white;
    color: #3b5999;
 }
-.social-icons li.twitter:hover > a {
+.social-icons li.twitter:hover > a,
+.social-icons li.twitter > a:focus {
    background-color: white;
    color: #46c1f6;
 }
-.social-icons li.instagram:hover > a {
+.social-icons li.instagram:hover > a,
+.social-icons li.instagram > a:focus{
    background-color: white;
    color: #e1306c;
 }
@@ -529,10 +548,12 @@ footer ul {
    padding: 10px 0;
 }
 .attribution a { 
-   color: var(--Moderate-Cyan); 
+   color: var(--Moderate-Cyan);
+   outline: transparent; 
 }
 
-.attribution a:hover {
+.attribution a:hover, 
+.attribution a:focus {
    color: var(--Bright-Blue);
 }
 
