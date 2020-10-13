@@ -525,8 +525,8 @@ footer ul {
 .company-info li a:hover::after, 
 .company-info li a:focus::after {
    transform: scaleX(1);
-   background-color: hsla(224, 93%, 58%, 0.5);
-   box-shadow: 0 0 0 0.2rem hsla(224, 93%, 58%, 0.5);
+   background-color: var(--Bright-Blue);
+   box-shadow: 0 0 0 0.2rem var(--Bright-Blue);
 }
 /* social-icons --*/
 
@@ -560,7 +560,7 @@ footer ul {
    display: block;
    width: 35px;
    height: 35px;
-   transition: .3s all;
+   transition: 1s all;
    outline: transparent;
 }
 
@@ -646,14 +646,6 @@ footer ul {
       margin-left: 0;
    }
    
-   header p {
-      /* max-width: 480px; */
-   }
-   
-   header form {
-      /* display: grid;
-      grid-template-columns: 1fr .5fr; */
-   }
 
    /* productive-900 ---*/
 
