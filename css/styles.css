@@ -89,6 +89,11 @@ input {
    outline: transparent;
 }
 
+input[type="email"]:active,
+input[type="email"]:focus {
+   border: 2px solid var(--Bright-Blue);
+}
+
 input[type="button"] {
    background-color: var(--Bright-Blue);
    color: var(--Light-Grayish-Blue);
@@ -621,8 +626,7 @@ footer ul {
       color: var(--Very-Dark-Blue);
    }
 
-   section.productive h2 + p,
-   section.productive h2 + p + p {
+   section.productive .productive-text-upper p{
       margin-left: 1rem;
    }
 
@@ -637,8 +641,101 @@ footer ul {
       margin-left: .5rem;
    }
 
-   /* adjust section before background and card testi p */
+
+   /* access-900 ---*/
+   section.access .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      width: 90vw;
+      margin: 0 auto;
+   }
+
+   section.access p {
+      max-width: unset;
+   }
+
+   section.access .access-text {
+      text-align: left;
+   }
+
+   section.access h2 {
+      font-size: 1.383rem;
+   }
+
+   section.access form {
+      text-align: left;
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   section.access input {
+      width: 40vw;
+      max-width: 460px;
+      display: block;
+      margin: 7px 0px;
+   }
+
+   section.access input[type="button"] {
+      max-width: 200px;
+   }
+
+   section.access input[type="email"]:active,
+   section.access input[type="email"]:focus {
+   border: 2px solid var(--Very-Dark-Blue);
+   }
+
+   /* footer-900 ---*/
+   footer .ftr-container {
+      display: grid;
+      grid-template-columns: .7fr 1fr .5fr;
+      grid-template-areas: 
+         "logo logo logo"
+         "contact info social"
+         "atri atri atri";
+   }
+
+   .ftr-company-logo {
+      grid-area: logo;
+   }
+
+   .company-contact {
+      grid-area: contact;
+      margin-top: 10px;
+   }
+
+   .company-info {
+      margin-top: 20px;
+      grid-area: info;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: start;
+   }
+
+   .company-info ul {
+      margin-top: 0;
+   }
+
+   .social-icons {
+      grid-area: social;
+      justify-self: start;
+      margin: 0;
+   }
+
+   .social-icons ul {
+      margin-top: 20px;
+   }
+
+   .attribution {
+      grid-area: atri;
+   }
+
 }
+
+
 
 
 
