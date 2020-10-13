@@ -58,6 +58,13 @@ h3 {
 
 figure.banner img {
    width: 100%;
+   max-width: 405px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+figure.banner {
+   text-align: center;
 }
 
 ul {
@@ -523,6 +530,117 @@ footer ul {
 .attribution a:hover {
    color: var(--Bright-Blue);
 }
+
+/* media-querries -*/
+
+/* 900 --*/
+@media screen and (min-width: 900px) {
+
+   /* header-900 ---*/
+   header {
+      height: 90vh;
+      margin-bottom: 50px;
+   }
+   
+   header .content {
+      display: grid;
+      margin: 20vh auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+         "text img";
+      text-align: left;
+      justify-content: center;
+      justify-items: center;
+      max-width: 85vw;
+   }
+   
+   header .content figure {
+      grid-area: img;
+      margin: 0;
+      align-self: center;
+      justify-self: center;
+   }
+   
+   header .content .header-lower {
+      grid-area: text;
+   }
+   
+   .header-lower h1,
+   .header-lower p {
+      margin-right: 0;
+      margin-left: 0;
+   }
+   
+   header p {
+      /* max-width: 480px; */
+   }
+   
+   header form {
+      /* display: grid;
+      grid-template-columns: 1fr .5fr; */
+   }
+
+   /* productive-900 ---*/
+
+   section.productive {
+      padding-top: 25px;
+      margin-top: 5rem;
+   }
+
+   section.productive::before {
+      background-image: url(../images/bg-curve-desktop.svg);
+   }
+
+   section.productive .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+         "text img";
+      align-items: center;
+      text-align: left;
+      width: 90vw;
+      margin: 0 auto;
+   }
+
+   section.productive figure {
+      grid-area: img;
+   }
+   section.productive .productive-text {
+      grid-area: text;
+   }
+
+   section.productive h2 {
+      max-width: 350px;
+      text-align: left;
+      margin-left: 1rem;
+      font-size: 1.383rem;
+      max-width: unset;
+   }
+
+   section.productive p {
+      color: var(--Very-Dark-Blue);
+   }
+
+   section.productive h2 + p,
+   section.productive h2 + p + p {
+      margin-left: 1rem;
+   }
+
+
+   section.productive a {
+      margin-left: 1rem;
+   }
+
+   /* testimonials-900 ----*/
+   section.testimonials {
+      padding: 30px 3vw;
+      margin-left: .5rem;
+   }
+
+   /* adjust section before background and card testi p */
+}
+
+
 
 
 
