@@ -219,6 +219,11 @@ header p {
    margin: 20px auto;
 }
 
+header form {
+   display: flex;
+   flex-direction: column;
+}
+
 header input {
    width: 85vw;
    max-width: 320px;
@@ -443,9 +448,9 @@ footer ul {
    background-color: var(--Light-Grayish-Blue);
    transform: scaleX(0);
    transform-origin: left;
-   transition: 1s transform,
-               1s background-color,
-               1s box-shadow;
+   transition: .5s transform,
+               .5s background-color,
+               .5s box-shadow;
    box-shadow: 0 0 0 0.2rem hsl(240, 75%, 98%);
 }
 
@@ -516,9 +521,9 @@ footer ul {
    background-color: var(--Light-Grayish-Blue);
    transform: scaleX(0);
    transform-origin: left;
-   transition: 1s transform,
-               1s background-color,
-               1s box-shadow;
+   transition: .5s transform,
+               .5s background-color,
+               .5s box-shadow;
    box-shadow: 0 0 0 0.2rem hsl(240, 75%, 98%);
 }
 
@@ -560,7 +565,7 @@ footer ul {
    display: block;
    width: 35px;
    height: 35px;
-   transition: 1s all;
+   transition: .5s all;
    outline: transparent;
 }
 
@@ -645,6 +650,10 @@ footer ul {
       margin-right: 0;
       margin-left: 0;
    }
+
+   header input {
+      margin-left: 0;
+   }
    
 
    /* productive-900 ---*/
@@ -715,6 +724,7 @@ footer ul {
 
    section.access p {
       max-width: unset;
+      margin: 1.2rem 0;
    }
 
    section.access .access-text {
@@ -789,6 +799,198 @@ footer ul {
       grid-area: atri;
    }
 
+}
+
+
+/* 1100 --*/
+
+@media screen and (min-width: 1100px) {
+
+   figure.banner img {
+      max-width: 615px
+   }
+
+   /* header-1100 ---*/
+
+   header {
+      height: 100vh;
+   }
+
+   nav {
+      margin: 25px auto;
+   }
+
+   nav a::after {
+      bottom: -7px;
+   }
+
+   nav img {
+      width: 130px;
+   }
+
+   nav li a {
+      font-size: 1rem;
+   }
+   header h1 {
+      font-size: 2.041rem;
+      max-width: 500px;
+   }
+
+   header p {
+      font-size: 1rem;
+      max-width: 515px;
+   }
+
+   header .header-lower {
+      align-self: center;
+   }
+
+   header form {
+      display: grid;
+      justify-content: start;
+      grid-template-columns: 1fr 1fr
+   }
+
+   header input[type="email"] {
+      width: 25vw;
+      max-width: 300px;
+   }
+
+   header input[type="button"] {
+      margin: 0;
+      margin-left: 10px;
+      width: 15vw;
+      max-width: 185px;
+      align-self: center;
+   }
+
+   /* productive-1100 ---*/
+
+   section.productive {
+      margin-top: 10vh;
+      padding-bottom: 10vh;
+   }
+
+   section.productive h2 {
+      font-size: 1.793rem;
+      margin-bottom: 15px;
+   }
+
+   section.productive .productive-text-upper p {
+      font-size: 1rem;
+      max-width: 450px;
+   }
+
+   section.productive a {
+      margin: 0.5rem auto 0.5rem 1rem;
+   }
+
+   /* testimonials-1100 ----*/
+
+   section.testimonials {
+      margin-top: 40px;
+      margin-bottom: 25px;
+   }
+
+   section.testimonials h3 {
+      font-size: 0.878rem;
+   }
+
+   section.testimonials p {
+      font-size: 0.823rem;
+   }
+
+   section.testimonials small {
+      font-size: 0.823rem;
+   }
+
+   .testi-lower {
+      align-items: center;
+   }
+
+   .testi-lower img {
+      width: 45px;
+   }
+
+   /* access-1100 ---*/
+
+   section.access h2 {
+      font-size: 1.793rem;
+   }
+
+   section.access p {
+      font-size: 1rem;
+      max-width: 510px;
+   }
+
+   section.access form {
+      justify-content: unset;
+      
+   }
+
+   /* footer-1100 --*/
+   footer p {
+      font-size: 1rem;
+   }
+
+   .company-contact .tel-num, .company-contact .email {
+      grid-template-columns: 40px 185px;
+   }
+
+}
+
+/* 1300 --*/
+
+@media screen and (min-width: 1300px) {
+
+   section.productive .productive-text-upper p {
+      max-width: 500px;
+   }
+   footer .company-info a {
+      font-size: 1rem;
+   }
+
+   footer .social-icons {
+      justify-self: center;
+   }
+}
+
+/* 1450 --*/
+
+@media screen and (min-width:1450px) {
+   header .header-container {
+      margin: 0px 10vw;
+   }
+
+   header .content {
+      max-width: unset;
+   }
+
+   header nav {
+      max-width: 100%;
+      max-width: unset;
+   }
+
+   section.productive .container {
+      max-width: 85vw;
+      margin: 0 auto;
+   }
+   
+   
+   section.productive .grid-container {
+      max-width: 1450px;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      max-width: 85vw;
+   }
+
+   section.access .grid-container {
+      max-width: 80vw;
+   } 
+
+   footer .ftr-container {
+      max-width: 80vw;
+   }
 }
 
 
